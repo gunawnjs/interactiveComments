@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+:root{
+	--primary-moderate-blue: hsl(238, 40%, 52%);
+	--primary-soft-red: hsl(358, 79%, 66%);
+	--primary-light-grayish-blue: hsl(239, 57%, 85%);
+	--primary-pale-red: hsl(357, 100%, 86%);
+
+	--neutral-dark-blue: hsl(212, 24%, 26%);
+	--neutral-grayish-blue: hsl(211, 10%, 45%);
+	--neutral-light-gray: hsl(223, 19%, 93%);
+	--neutral-very-light-gray: hsl(228, 33%, 97%);
+	--neutral-white: hsl(0, 0%, 100%);
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Rubik;
+	font-size: 15px;
+}
+button{
+	all: unset;
+	cursor: pointer;
+}
+body{
+	background-color: var(--neutral-very-light-gray);
+}
+.card-wrapper{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.comments{
+	border-radius: 5px;
+	background-color: #fff;
+	width: 95vw;
+}
+.replies{
+	display: flex;
+	flex-direction: row;
+	width: 95vw;
+}
+.user-wrapper{
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+	padding: 1rem;
+}
+.user-wrapper img{
+	width: 30px;
+}
+.username{
+	font-weight: 500;
+}
+.user-wrapper p:last-child{
+	color: var(--neutral-grayish-blue);
+}
+.user-wrapper *{
+	margin-right: 1rem;
+}
+.body-comment{
+	color: var(--neutral-grayish-blue);
+	padding: 0 1rem;
+}
+.action-button{
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.vote-btn{
+	display: flex;
+	flex-direction: row;
+	/*padding:1rem;*/
+}
+.vote-btn button{
+	border: none;
+	background-color: var(--neutral-light-gray);
+	color: var(--primary-light-grayish-blue);
+	width: 2.5rem;
+	height: 2.7rem;
+
+}
+.vote-btn button:active{
+	color: var(--primary-moderate-blue);
+}
+.vote-btn span{
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	font-size: 14px;
+}
+.vote-btn button:first-child{
+	border-top-left-radius: 20%;
+	border-bottom-left-radius: 20%;
+}
+.vote-btn button:last-child{
+	border-top-right-radius: 20%;
+	border-bottom-right-radius: 20%;
+}
+.vote-btn p{
+	font-weight: 500;
+	background-color: var(--neutral-light-gray);
+	color: var(--primary-moderate-blue);
+	width: 2.5rem;
+	height: 2.7rem;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+}
+.reply-btn button{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.reply-btn button{
+	color: var(--primary-moderate-blue);
+	font-weight: 700;
+}
+.reply-btn button:active{
+	color: var(--primary-light-grayish-blue);
+}
+.reply-btn span{
+	margin-right: 0.3rem;
+}
