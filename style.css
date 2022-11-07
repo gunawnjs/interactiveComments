@@ -24,25 +24,57 @@ button{
 body{
 	background-color: var(--neutral-very-light-gray);
 }
+textarea{
+	border: solid 1px var(--neutral-light-gray);
+	border-radius: 5px;
+	transition: 0.2s;
+	padding: 1rem;
+	outline: none;
+	resize: none;
+}
+textarea:focus{
+	border: solid 2px var(--neutral-light-gray);
+}
 .card-wrapper{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	/*border: solid 2px red;*/
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
 	align-items: center;
+	justify-content: center;
+	padding: 8px;
 }
 .comments{
+	/*border: solid 1px red;*/
 	border-radius: 5px;
 	background-color: #fff;
+	margin-bottom: 12px;
 	width: 95vw;
+}
+.card-wrapper .active-cmt{
+	border: solid 1px red;
+	margin-bottom: 12px;
+	/*width: 85vw;*/
+	/*display: unset;*/
 }
 .replies{
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	width: 95vw;
+	margin: 12px;
+	margin-top: 0;
+}
+.replies hr{
+	border: solid 0.5px var(--primary-light-grayish-blue);
+	border-radius: 15px;
+	background-color: var(--primary-light-grayish-blue);
+	opacity: 0.5;
+}
+.replies-wrapper .comments{
+	width: 92vw;
+}
+.replies-wrapper div:last-child{
+	margin-bottom: 0;
 }
 .user-wrapper{
 	display: flex;
@@ -94,11 +126,11 @@ body{
 	justify-content: center;
 	font-size: 14px;
 }
-.vote-btn button:first-child{
+.vote-btn button:first-child {
 	border-top-left-radius: 20%;
 	border-bottom-left-radius: 20%;
 }
-.vote-btn button:last-child{
+.vote-btn button:last-child {
 	border-top-right-radius: 20%;
 	border-bottom-right-radius: 20%;
 }
@@ -128,4 +160,30 @@ body{
 }
 .reply-btn span{
 	margin-right: 0.3rem;
+}
+.active-cmt{
+	border-radius: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: var(--neutral-white);
+	padding: 1rem;
+}
+.active-cmt-wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+}
+.active-cmt-wrapper img{
+	width: 38px;
+	height: 38px;
+}
+.active-cmt-wrapper button{
+	color: var(--neutral-white);
+	background-color: var(--primary-moderate-blue);
+	border-radius: 5px;
+	font-size: 12px;
+	font-weight: 500;
+	padding: 0.8rem 1.2rem;
 }
