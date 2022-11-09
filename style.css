@@ -22,7 +22,7 @@ button{
 	cursor: pointer;
 }
 body{
-	background-color: var(--neutral-very-light-gray);
+	background-color: #bdbdbd;
 }
 textarea{
 	border: solid 1px var(--neutral-light-gray);
@@ -31,30 +31,37 @@ textarea{
 	padding: 1rem;
 	outline: none;
 	resize: none;
+	box-sizing: border-box;
 }
 textarea:focus{
 	border: solid 2px var(--neutral-light-gray);
 }
 .card-wrapper{
-	/*border: solid 2px red;*/
+	border: solid 2px red;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	padding: 8px;
 }
+.card-wrapper .active-cmt{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
 .comments{
 	/*border: solid 1px red;*/
 	border-radius: 5px;
 	background-color: #fff;
 	margin-bottom: 12px;
-	width: 95vw;
+	width: 100%;
+}
+.comments:last-child{
+	margin-bottom: 0;
 }
 .card-wrapper .active-cmt{
 	border: solid 1px red;
 	margin-bottom: 12px;
-	/*width: 85vw;*/
-	/*display: unset;*/
 }
 .replies{
 	display: flex;
@@ -65,13 +72,15 @@ textarea:focus{
 	margin-top: 0;
 }
 .replies hr{
-	border: solid 0.5px var(--primary-light-grayish-blue);
+	/* border: solid 0.5px var(--primary-light-grayish-blue); */
+	border: solid 0.5px red;
 	border-radius: 15px;
-	background-color: var(--primary-light-grayish-blue);
+	/* background-color: var(--primary-light-grayish-blue); */
+	background-color: red;
 	opacity: 0.5;
 }
-.replies-wrapper .comments{
-	width: 92vw;
+.replies-wrapper{
+	padding-left: 12px;
 }
 .replies-wrapper div:last-child{
 	margin-bottom: 0;
@@ -163,9 +172,6 @@ textarea:focus{
 }
 .active-cmt{
 	border-radius: 5px;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
 	background-color: var(--neutral-white);
 	padding: 1rem;
 }
