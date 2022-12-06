@@ -21,62 +21,58 @@ button{
 	all: unset;
 	cursor: pointer;
 }
+button:active{
+	opacity: 0.6;
+}
 body{
-	background-color: #bdbdbd;
+	background-color: var(--neutral-very-light-gray);
 }
 textarea{
-	border: solid 1px var(--neutral-light-gray);
+	border: solid 2px var(--neutral-light-gray);
 	border-radius: 5px;
 	transition: 0.2s;
 	padding: 1rem;
 	outline: none;
 	resize: none;
 	box-sizing: border-box;
-}
-textarea:focus{
-	border: solid 2px var(--neutral-light-gray);
-}
-.card-wrapper{
-	border: solid 2px red;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: 8px;
-}
-.card-wrapper .active-cmt{
-	display: flex;
-	flex-direction: column;
 	width: 100%;
 }
+textarea:focus{
+	border: solid 2px var(--primary-light-grayish-blue);
+	outline: solid 1px;
+}
+li{
+	list-style: none;
+}
+.card-wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 8px;
+}
+.card-wrapper .active-cmt{
+	margin-bottom: 0;
+}
 .comments{
-	/*border: solid 1px red;*/
 	border-radius: 5px;
-	background-color: #fff;
+	background-color: var(--neutral-white);
 	margin-bottom: 12px;
 	width: 100%;
 }
 .comments:last-child{
 	margin-bottom: 0;
 }
-.card-wrapper .active-cmt{
-	border: solid 1px red;
-	margin-bottom: 12px;
-}
 .replies{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 95vw;
-	margin: 12px;
+	margin: 12px 0;
 	margin-top: 0;
 }
 .replies hr{
-	/* border: solid 0.5px var(--primary-light-grayish-blue); */
-	border: solid 0.5px red;
+	border: solid 0.5px var(--primary-light-grayish-blue); 
 	border-radius: 15px;
-	/* background-color: var(--primary-light-grayish-blue); */
-	background-color: red;
+	background-color: var(--primary-light-grayish-blue); 
 	opacity: 0.5;
 }
 .replies-wrapper{
@@ -84,6 +80,13 @@ textarea:focus{
 }
 .replies-wrapper div:last-child{
 	margin-bottom: 0;
+}
+.user-group{
+	display: flex;
+	align-items: center;
+}
+.user-group img{
+	margin-right: 1rem;
 }
 .user-wrapper{
 	display: flex;
@@ -96,12 +99,11 @@ textarea:focus{
 }
 .username{
 	font-weight: 500;
+	margin-right: 0.5rem;
 }
-.user-wrapper p:last-child{
+.user-group .dmmy{
 	color: var(--neutral-grayish-blue);
-}
-.user-wrapper *{
-	margin-right: 1rem;
+	margin-left: 0.5rem;
 }
 .body-comment{
 	color: var(--neutral-grayish-blue);
@@ -111,12 +113,11 @@ textarea:focus{
 	padding: 1rem;
 	display: flex;
 	justify-content: space-between;
-	align-items: baseline;
+	align-items: center;
 }
 .vote-btn{
 	display: flex;
 	flex-direction: row;
-	/*padding:1rem;*/
 }
 .vote-btn button{
 	border: none;
@@ -155,6 +156,9 @@ textarea:focus{
 	justify-items: center;
 	align-items: center;
 }
+.replies-dver{
+	display: none;
+}
 .reply-btn button{
 	display: flex;
 	flex-direction: row;
@@ -170,10 +174,38 @@ textarea:focus{
 .reply-btn span{
 	margin-right: 0.3rem;
 }
+.act-user-active{
+	display: flex;
+}
+.act-user-active button{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	font-weight: 500;
+}
+.act-user-active button span{
+	margin-right: 0.3rem;
+}
+.act-user-active button:first-child{
+	color: var(--primary-soft-red);
+	margin-right: 12px;
+}
+.act-user-active button:first-child:active{
+	color: var(--primary-pale-red);
+}
+.act-user-active button:last-child{
+	color: var(--primary-moderate-blue);
+}
 .active-cmt{
 	border-radius: 5px;
 	background-color: var(--neutral-white);
 	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 12px;
+}
+.img-dver{
+	display: none;
 }
 .active-cmt-wrapper{
 	display: flex;
@@ -192,4 +224,164 @@ textarea:focus{
 	font-size: 12px;
 	font-weight: 500;
 	padding: 0.8rem 1.2rem;
+}
+.badge{
+	color: var(--neutral-white);
+	background-color: var(--primary-moderate-blue);
+	padding:2px 6px;
+	padding-bottom: 4px;
+}
+@media screen and (min-width: 600px){
+	.card-wrapper{
+		margin: 2rem 4rem;
+	}
+	.comments{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.action-button{
+		align-items: unset;
+		padding-right: 0.5rem;
+	}
+	.d-ver{
+		padding-bottom: 2rem;
+	}
+	.reply-btn{
+		display: none;
+	}
+	.replies-dver{
+		display: flex;
+		margin-right: 0;
+	}
+	.replies-dver button{
+		display: flex;
+	}
+	.replies-dver {
+		color: var(--primary-moderate-blue);
+		font-weight: 700;
+	}
+	.replies-dver button:active{
+		color: var(--primary-light-grayish-blue);
+	}
+	.replies-dver span{
+		margin-right: 0.3rem;
+	}
+	.vote-btn{
+		flex-direction: column;
+	}
+	.vote-btn button{
+		width: 2.2rem;
+		height: 1.8rem;
+	}
+	.vote-btn span{
+		font-size: 12px;
+	}
+	.vote-btn p{
+		width: 2.2rem;
+		height: 1.8rem;
+		font-size: 14px;
+	}
+	.vote-btn button:first-child {
+		border-top-left-radius: 20%;
+		border-top-right-radius: 20%;
+		border-bottom-left-radius: 0;
+	}
+	.vote-btn button:last-child {
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 20%;
+		border-bottom-right-radius: 20%;
+	}
+	.user-wrapper{
+		justify-content: space-between;
+	}
+	.replies hr{
+		margin: 0 2rem;
+	}
+	.replies-wrapper{
+		padding-left: 0;
+	}
+	.active-cmt{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: start;
+	}
+	.active-cmt textarea{
+		margin: 0 1rem;
+	}
+	.img-dver{
+		display: block;
+		width: 38px;
+		height: 38px;
+	}
+	.active-cmt-wrapper{
+		margin-top: 0;
+	}
+	.active-cmt-wrapper img{
+		display: none;
+	}
+	.replies-dver{
+		z-index: 3;
+	}
+	.replies-dver button:first-child{
+		z-index: 1;
+	}
+	.replies-dver button:first-child span{
+		font-size: 20px;
+	}
+	.replies-dver button:last-child{
+		display: none;
+	}
+	.disp-none{
+		display: none;
+	}
+	.modal-wrapper{
+		position: relative;
+		display: none;
+	}
+	.menu-modal{
+		position: absolute;
+		right: 0;
+		background-color: var(--neutral-white);
+		width: 120px;
+		height: 120px;
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		border-radius: 5px;
+		z-index: 2;
+	}
+	.menu-modal .container{
+		position: relative;
+		margin: 0;
+		left: auto;
+	}
+	.menu-modal .container li{
+		display: flex;
+		padding:0.5rem 0.8rem;
+		color: var(--neutral-grayish-blue);
+	}
+	.menu-modal .container li:first-child{
+		padding-top: 1.4rem;
+	}
+	.menu-modal .container li:first-child:hover{
+		background-color: var(--neutral-light-gray);
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+	.menu-modal .container li:last-child:hover{
+		background-color: var(--neutral-light-gray);
+	}
+	.menu-modal .container span{
+		margin-right: 0.6rem;
+	}
+	.menu-modal .container p, span{
+		font-size: 16px;
+	}
+	.menu-modal .container p{
+		font-weight: 400;
+	}
+}
+
+@media screen and (min-width: 900px){
+	.card-wrapper{
+		margin: 4rem 10rem;
+	}
 }

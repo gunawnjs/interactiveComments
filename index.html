@@ -1,127 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <title>Frontend Mentor | Interactive comments section</title>
-  </head>
-  <body>
-    <div class="card-wrapper">
-      <div class="comments">
-        <div class="user-wrapper">
-          <img src="./images/avatars/image-amyrobson.webp">
-          <p class="username">amyrobson</p>
-          <p>1 month ago</p>
-        </div>
-        <div class="body-comment">
-          <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.</p>
-        </div>
-        <div class="action-button">
-          <div class="vote-btn">
-            <button><span class="mdi mdi-plus-thick"></span></button>
-            <p>2</p>
-            <button><span class="mdi mdi-minus-thick"></span></button>
-          </div>
-          <div class="reply-btn">
-            <button>
-            <span class="mdi mdi-reply"></span>
-            <p>Reply</p>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="active-cmt">
-        <textarea placeholder="Add a comment..." rows="4"></textarea>
-        <div class="active-cmt-wrapper">
-          <img src="images/avatars/image-amyrobson.webp">
-          <button>SEND</button>
-        </div>
-      </div>      
-      <div class="replies">
-        <hr>
-        <div class="replies-wrapper">
-          <div class="comments">
-            <div class="user-wrapper">
-              <img src="./images/avatars/image-amyrobson.webp">
-              <p class="username">amyrobson</p>
-              <p>1 month ago</p>
-            </div>
-            <div class="body-comment">
-              <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.</p>
-            </div>
-            <div class="action-button">
-              <div class="vote-btn">
-                <button><span class="mdi mdi-plus-thick"></span></button>
-                <p>2</p>
-                <button><span class="mdi mdi-minus-thick"></span></button>
-              </div>
-              <div class="reply-btn">
-                <button>
-                <span class="mdi mdi-reply"></span>
-                <p>Reply</p>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="comments">
-            <div class="user-wrapper">
-              <img src="./images/avatars/image-amyrobson.webp">
-              <p class="username">amyrobson</p>
-              <p>1 month ago</p>
-            </div>
-            <div class="body-comment">
-              <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.</p>
-            </div>
-            <div class="action-button">
-              <div class="vote-btn">
-                <button><span class="mdi mdi-plus-thick"></span></button>
-                <p>2</p>
-                <button><span class="mdi mdi-minus-thick"></span></button>
-              </div>
-              <div class="reply-btn">
-                <button>
-                <span class="mdi mdi-reply"></span>
-                <p>Reply</p>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="active-cmt">
-            <textarea placeholder="Add a comment..." rows="4" cols="wrap"></textarea>
-            <div class="active-cmt-wrapper">
-              <img src="images/avatars/image-amyrobson.webp">
-              <button>SEND</button>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="comments">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Interactive comments section</title>
+</head>
+
+<body>
+  <div class="card-wrapper">
+    <div class="comments">
+      <div class="d-ver">
         <div class="user-wrapper">
-          <img src="./images/avatars/image-amyrobson.webp">
-          <p class="username">amyrobson</p>
-          <p>1 month ago</p>
+          <div class="user-group">
+            <img src="./images/avatars/image-amyrobson.webp">
+            <p class="username">amyrobson</p>
+            <p>1 month ago</p>
+          </div>
+          <div class="replies-dver">
+            <button>
+              <span class="mdi mdi-reply"></span>
+              <p>Reply</p>
+            </button>
+          </div>
         </div>
         <div class="body-comment">
-          <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.</p>
+          <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've
+            nailed the design and the responsiveness at various breakpoints works really well.</p>
         </div>
-        <div class="action-button">
-          <div class="vote-btn">
-            <button><span class="mdi mdi-plus-thick"></span></button>
-            <p>2</p>
-            <button><span class="mdi mdi-minus-thick"></span></button>
-          </div>
-          <div class="reply-btn">
-            <button>
+      </div>
+      <div class="action-button">
+        <div class="vote-btn">
+          <button><span class="mdi mdi-plus-thick"></span></button>
+          <p>2</p>
+          <button><span class="mdi mdi-minus-thick"></span></button>
+        </div>
+        <div class="reply-btn">
+          <button>
             <span class="mdi mdi-reply"></span>
             <p>Reply</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="comments">
+      <div class="d-ver">
+        <div class="user-wrapper">
+          <div class="user-group">
+            <img src="./images/avatars/image-amyrobson.webp">
+            <p class="username">amyrobson</p>
+            <p>1 month ago</p>
+          </div>
+          <div class="replies-dver">
+            <button>
+              <span class="mdi mdi-reply"></span>
+              <p>Reply</p>
             </button>
+          </div>
+        </div>
+        <div class="body-comment">
+          <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've
+            nailed the design and the responsiveness at various breakpoints works really well.</p>
+        </div>
+      </div>
+      <div class="action-button">
+        <div class="vote-btn">
+          <button><span class="mdi mdi-plus-thick"></span></button>
+          <p>2</p>
+          <button><span class="mdi mdi-minus-thick"></span></button>
+        </div>
+        <div class="reply-btn">
+          <button>
+            <span class="mdi mdi-reply"></span>
+            <p>Reply</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="replies">
+      <hr>
+      <div class="replies-wrapper">
+        <div class="comments">
+          <div class="d-ver">
+            <div class="user-wrapper">
+              <div class="user-group">
+                <img src="./images/avatars/image-amyrobson.webp">
+                <p class="username">amyrobson</p>
+                <p>1 month ago</p>
+              </div>
+              <div class="replies-dver">
+                <button><span class="mdi mdi-reply"></span>
+                  <p>Reply</p>
+                </button>
+              </div>
+            </div>
+            <div class="body-comment">
+              <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've
+                nailed the design and the responsiveness at various breakpoints works really well.</p>
+            </div>
+          </div>
+          <div class="action-button">
+            <div class="vote-btn">
+              <button><span class="mdi mdi-plus-thick"></span></button>
+              <p>2</p>
+              <button><span class="mdi mdi-minus-thick"></span></button>
+            </div>
+            <div class="reply-btn">
+              <button>
+                <span class="mdi mdi-reply"></span>
+                <p>Reply</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="comments">
+          <div class="d-ver">
+            <div class="user-wrapper">
+              <div class="user-group">
+                <img src="./images/avatars/image-amyrobson.webp">
+                <p class="username">amyrobson</p>
+                <p>1 month ago</p>
+              </div>
+              <div class="replies-dver">
+                <button>
+                  <span class="mdi mdi-reply"></span>
+                  <p>Reply</p>
+                </button>
+              </div>
+            </div>
+            <div class="body-comment">
+              <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've
+                nailed the design and the responsiveness at various breakpoints works really well.</p>
+            </div>
+          </div>
+          <div class="action-button">
+            <div class="vote-btn">
+              <button><span class="mdi mdi-plus-thick"></span></button>
+              <p>2</p>
+              <button><span class="mdi mdi-minus-thick"></span></button>
+            </div>
+            <div class="reply-btn">
+              <button>
+                <span class="mdi mdi-reply"></span>
+                <p>Reply</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="userLogin" class="comments user-login">
+          <div class="d-ver">
+            <div class="user-wrapper">
+              <div class="user-group">
+                <img src="./images/avatars/image-amyrobson.webp">
+                <p class="username">amyrobson</p>
+                <div class="badge">
+                  <p>you</p>
+                </div>
+                <p class="dmmy">1 month ago</p>
+              </div>
+              <div class="replies-dver">
+                <button id="menu">
+                  <span class="mdi mdi-dots-vertical"></span>
+                </button>
+                <div id="modal" class="modal-wrapper">
+                  <div class="menu-modal">
+                    <div class="container">
+                        <ul>
+                          <li><span class="mdi mdi-pencil"></span><p>Edit</p></li>
+                          <li><span class="mdi mdi-delete"></span><p>Delete</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="body-comment">
+              <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've
+                nailed the design and the responsiveness at various breakpoints works really well.</p>
+            </div>
+          </div>
+          <div class="action-button">
+            <div class="vote-btn">
+              <button><span class="mdi mdi-plus-thick"></span></button>
+              <p>2</p>
+              <button><span class="mdi mdi-minus-thick"></span></button>
+            </div>
+            <div class="act-user-active disp-none">
+              <button>
+                <span class="mdi mdi-delete"></span>
+                <p>Delete</p>
+              </button>
+              <button>
+                <span class="mdi mdi-pencil"></span>
+                <p>Edit</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="active-cmt">
+          <img class="img-dver" src="images/avatars/image-amyrobson.webp">
+          <textarea placeholder="Add a comment..." rows="4"></textarea>
+          <div class="active-cmt-wrapper">
+            <img src="images/avatars/image-amyrobson.webp">
+            <button>SEND</button>
           </div>
         </div>
       </div>
     </div>
-  </body>
+    <div class="comments">
+      <div class="d-ver">
+        <div class="user-wrapper">
+          <div class="user-group">
+            <img src="./images/avatars/image-amyrobson.webp">
+            <p class="username">amyrobson</p>
+            <p>1 month ago</p>
+          </div>
+          <div class="replies-dver">
+            <button>
+              <span class="mdi mdi-reply"></span>
+              <p>Reply</p>
+            </button>
+          </div>
+        </div>
+        <div class="body-comment">
+          <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've
+            nailed the design and the responsiveness at various breakpoints works really well.</p>
+        </div>
+      </div>
+      <div class="action-button">
+        <div class="vote-btn">
+          <button><span class="mdi mdi-plus-thick"></span></button>
+          <p>2</p>
+          <button><span class="mdi mdi-minus-thick"></span></button>
+        </div>
+        <div class="reply-btn">
+          <button>
+            <span class="mdi mdi-reply"></span>
+            <p>Reply</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="active-cmt">
+      <img class="img-dver" src="images/avatars/image-amyrobson.webp">
+      <textarea placeholder="Add a comment..." rows="4"></textarea>
+      <div class="active-cmt-wrapper">
+        <img src="images/avatars/image-amyrobson.webp">
+        <button>SEND</button>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
 </html>
